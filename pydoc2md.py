@@ -50,6 +50,8 @@ class TextDoc2Markdown(pydoc.TextDoc):
     def indent(self, text, prefix=''):
         """Indent text by prepending a given prefix to each line."""
         if not text: return ''
+        if prefix == ' |  ':
+            prefix = ''
         lines = text.split('\n')
         lines = map(lambda line, prefix=prefix: prefix + line, lines)
         if lines: lines[-1] = lines[-1].rstrip()
