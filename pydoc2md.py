@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 """
-pydoc2md.py
------------
+** pydoc2md.py **
+
 This module contains a simple class to output Markdown-style pydocs.
 
 * Links:
@@ -47,7 +47,7 @@ class TextDoc2Markdown(pydoc.TextDoc):
         """Format a string in bold by overstriking."""
         return "**%s**" % text
 
-    def indent(self, text, prefix='    '):
+    def indent(self, text, prefix=''):
         """Indent text by prepending a given prefix to each line."""
         if not text: return ''
         lines = text.split('\n')
@@ -57,8 +57,7 @@ class TextDoc2Markdown(pydoc.TextDoc):
 
     def section(self, title, contents):
         """Format a section with a given heading."""
-        return self.bold(title) + '\n' + self.indent(contents).rstrip() + '\n\n'
-
+        return '## %s' % title + '\n\n' + self.indent(contents).rstrip() + '\n\n'
         
 txt2md = TextDoc2Markdown()
 
