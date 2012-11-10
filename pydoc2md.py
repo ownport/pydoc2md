@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 
 """
-** pydoc2md.py **
+pydoc2md.py - this module contains a simple class to output Markdown-style pydocs.
 
-This module contains a simple class to output Markdown-style pydocs.
-
-* Links:
-
+**Links:**
 - [Markdown syntax]<http://sourceforge.net/p/pydoc/wiki/markdown_syntax/>
 """
 

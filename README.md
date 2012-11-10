@@ -2,7 +2,7 @@
 
 ## NAME
 
-pydoc2md - ** pydoc2md.py **
+pydoc2md - pydoc2md.py - this module contains a simple class to output Markdown-style pydocs.
 
 ## FILE
 
@@ -10,10 +10,7 @@ pydoc2md - ** pydoc2md.py **
 
 ## DESCRIPTION
 
-This module contains a simple class to output Markdown-style pydocs.
-
-* Links:
-
+**Links:**
 - [Markdown syntax]<http://sourceforge.net/p/pydoc/wiki/markdown_syntax/>
 
 ## CLASSES
