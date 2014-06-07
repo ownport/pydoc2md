@@ -101,7 +101,7 @@ class TextDoc2Markdown(pydoc.TextDoc, object):
                     modpkgs.append(file + ' (package)')
             modpkgs.sort()
             result = result + self.section(
-                'Package contents', join(modpkgs, '\n'))
+                'Package contents', '\n'.join(modpkgs))
 
         if classes:
             classlist = map(lambda (key, value): value, classes)
