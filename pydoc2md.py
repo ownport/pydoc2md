@@ -20,6 +20,7 @@ $ ./pydoc2md pydoc2md > README.md
 __author__ = 'Andrey Usov <https://github.com/ownport/pydoc2md>'
 __version__ = '0.1'
 
+import os
 import sys
 import pydoc
 import inspect
