@@ -97,7 +97,7 @@ class TextDoc2Markdown(pydoc.TextDoc, object):
                 modname = inspect.getmodulename(file)
                 if modname and modname not in modpkgs:
                     modpkgs.append(modname)
-                elif ispackage(path):
+                elif pydoc.ispackage(path):
                     modpkgs.append(file + ' (package)')
             modpkgs.sort()
             result = result + self.section(
