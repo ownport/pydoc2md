@@ -88,10 +88,6 @@ class TextDoc2Markdown(pydoc.TextDoc, object):
         for key, value in inspect.getmembers(object, inspect.isroutine):
             if inspect.isbuiltin(value) or inspect.getmodule(value) is object:
                 funcs.append((key, value))
-        data = []
-        for key, value in inspect.getmembers(object, pydoc.isdata):
-            if key not in ['__builtins__', '__doc__']:
-                data.append((key, value))
 
         if hasattr(object, '__path__'):
             modpkgs = []
@@ -123,12 +119,6 @@ class TextDoc2Markdown(pydoc.TextDoc, object):
             for key, value in funcs:
                 contents.append(self.document(value, key, name))
             result = result + self.section('Functions', '\n'.join(contents))
-
-        if data:
-            contents = []
-            for key, value in data:
-                contents.append(self.docother(value, key, name, 70))
-            result = result + self.section('Data', '\n'.join(contents))
 
         if hasattr(object, '__version__'):
             version = str(object.__version__)

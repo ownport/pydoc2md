@@ -94,15 +94,6 @@ PyDoc in Markdown format
 #### cli()
 *Command-line interface (looks at sys.argv to decide what to do).*
 
-## Data
-
-**__all__** = ['render_doc', 'TextDoc2Markdown']
-**__author__** = 'Andrey Usov <https://github.com/ownport/pydoc2md>'
-**__file__** = './pydoc2md.pyc'
-**__name__** = 'pydoc2md'
-**__package__** = None
-**__version__** = '0.1'
-
 ## Version
 
 0.1
