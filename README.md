@@ -4,6 +4,20 @@
 
 pydoc2md - pydoc2md.py
 
+## Description
+
+Simple script for creation python code documentation in Markdown format
+
+### how to use
+
+```shell
+$ ./pydoc2md pydoc2md > README.md
+```
+
+### links
+
+- [Markdown syntax](http://sourceforge.net/p/pydoc/wiki/markdown_syntax/)
+
 ## Classes Tree
 
 ```text
@@ -84,7 +98,7 @@ PyDoc in Markdown format
 
 **__all__** = ['render_doc', 'TextDoc2Markdown']
 **__author__** = 'Andrey Usov <https://github.com/ownport/pydoc2md>'
-**__file__** = './pydoc2md.py'
+**__file__** = './pydoc2md.pyc'
 **__name__** = 'pydoc2md'
 **__package__** = None
 **__version__** = '0.1'

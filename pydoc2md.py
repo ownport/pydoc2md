@@ -77,6 +77,8 @@ class TextDoc2Markdown(pydoc.TextDoc, object):
         name = object.__name__ # ignore the passed-in name
         synop, desc = pydoc.splitdoc(pydoc.getdoc(object))
         result = self.section('Name', name + (synop and ' - ' + synop))
+        if desc:
+            result = result + self.section('Description', desc)
 
         classes = []
         for key, value in inspect.getmembers(object, inspect.isclass):
