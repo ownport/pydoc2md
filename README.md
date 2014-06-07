@@ -10,7 +10,8 @@ pydoc2md - pydoc2md.py
 +-- __builtin__.object
 |  +-- TextDoc2Markdown(pydoc.TextDoc, __builtin__.object)
 +-- pydoc.TextDoc(pydoc.Doc)
-|  +-- TextDoc2Markdown(pydoc.TextDoc, __builtin__.object)```
+|  +-- TextDoc2Markdown(pydoc.TextDoc, __builtin__.object)
+```
 
 ## Classes
 

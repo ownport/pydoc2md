@@ -108,7 +108,7 @@ class TextDoc2Markdown(pydoc.TextDoc, object):
             classlist = map(lambda (key, value): value, classes)
             classes_tree = self.formattree(inspect.getclasstree(classlist, 1), name) 
             if classes_tree:
-                classes_tree = '```text\n%s```\n' % classes_tree
+                classes_tree = '```text\n%s\n```\n' % classes_tree
                 result = result + self.section('Classes Tree', classes_tree)
 
             contents = []
