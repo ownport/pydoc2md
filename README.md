@@ -1,100 +1,98 @@
 # module pydoc2md
 
-## NAME
+## Name
 
-pydoc2md - pydoc2md.py - this module contains a simple class to output Markdown-style pydocs.
+pydoc2md - pydoc2md.py
 
-## FILE
+## Classes Tree
 
-/media/data/devel/git-repos/pydoc2md/pydoc2md.py
+```text
++-- __builtin__.object
+|  +-- TextDoc2Markdown(pydoc.TextDoc, __builtin__.object)
++-- pydoc.TextDoc(pydoc.Doc)
+|  +-- TextDoc2Markdown(pydoc.TextDoc, __builtin__.object)```
 
-## DESCRIPTION
+## Classes
 
-**Links:**
-- [Markdown syntax]<http://sourceforge.net/p/pydoc/wiki/markdown_syntax/>
+### class **TextDoc2Markdown**(pydoc.TextDoc, __builtin__.object)
+PyDoc in Markdown format
 
-## CLASSES
+#### bold(self, text)
+*Format a string in bold*
 
-pydoc.TextDoc(pydoc.Doc)
-    TextDoc2Markdown
 
-class **TextDoc2Markdown**(pydoc.TextDoc)
-> Method resolution order:
->     TextDoc2Markdown
->     pydoc.TextDoc
->     pydoc.Doc
-> 
-> Methods defined here:
-> 
-> **bold**(self, text)
-> Format a string in bold by overstriking.
-> 
-> **indent**(self, text, prefix='')
-> Indent text by prepending a given prefix to each line.
-> 
-> **section**(self, title, contents)
-> Format a section with a given heading.
-> 
-> ----------------------------------------------------------------------
-> Methods inherited from pydoc.TextDoc:
-> 
-> **docclass**(self, object, name=None, mod=None, *ignored)
-> Produce text documentation for a given class object.
-> 
-> **docdata**(self, object, name=None, mod=None, cl=None)
-> Produce text documentation for a data descriptor.
-> 
-> **docmodule**(self, object, name=None, mod=None)
-> Produce text documentation for a given module object.
-> 
-> **docother**(self, object, name=None, mod=None, parent=None, maxlen=None, doc=None)
-> Produce text documentation for a data object.
-> 
-> **docproperty**(self, object, name=None, mod=None, cl=None)
-> Produce text documentation for a property.
-> 
-> **docroutine**(self, object, name=None, mod=None, cl=None)
-> Produce text documentation for a function or method object.
-> 
-> **formattree**(self, tree, modname, parent=None, prefix='')
-> Render in text a class tree as returned by inspect.getclasstree().
-> 
-> **formatvalue**(self, object)
-> Format an argument default value as text.
-> 
-> **repr**(self, x) from pydoc.TextRepr
-> 
-> ----------------------------------------------------------------------
-> Methods inherited from pydoc.Doc:
-> 
-> **document**(self, object, name=None, *args)
-> Generate documentation for an object.
-> 
-> **fail**(self, object, name=None, *args)
-> Raise an exception for unimplemented types.
-> 
-> **getdocloc**(self, object)
-> Return the location of module docs or None
+#### docclass(self, object, name=None, mod=None)
+*Produce text documentation for a given class object.*
 
-## FUNCTIONS
 
-**cli**()
-Command-line interface (looks at sys.argv to decide what to do).
+#### docdata(self, object, name=None, mod=None, cl=None)
+*Produce text documentation for a data descriptor.*
 
-**render_doc**(thing)
-Render text documentation, given an object or a path to an object.
 
-## DATA
+#### docmodule(self, object, name=None, mod=None)
+*Produce text documentation for a given module object.*
 
+
+#### docother(self, object, name=None, mod=None, parent=None, maxlen=None, doc=None)
+*Produce text documentation for a data object.*
+
+
+#### docproperty(self, object, name=None, mod=None, cl=None)
+*Produce text documentation for a property.*
+
+
+#### docroutine(self, object, name=None, mod=None, cl=None)
+*Produce text documentation for a function or method object.*
+
+
+#### document(self, object, name=None, *args)
+*Generate documentation for an object.*
+
+
+#### fail(self, object, name=None, *args)
+*Raise an exception for unimplemented types.*
+
+
+#### formattree(self, tree, modname, parent=None, prefix='+-- ')
+*Render in text a class tree as returned by inspect.getclasstree().*
+
+
+#### formatvalue(self, object)
+*Format an argument default value as text.*
+
+
+#### getdocloc(self, object)
+*Return the location of module docs or None*
+
+
+#### indent(self, text, prefix='')
+*Indent text by prepending a given prefix to each line.*
+
+
+#### repr(self, x) from pydoc.TextRepr
+
+#### section(self, title, contents)
+*Format a section with a given heading.*
+
+## Functions
+
+#### cli()
+*Command-line interface (looks at sys.argv to decide what to do).*
+
+## Data
+
+**__all__** = ['render_doc', 'TextDoc2Markdown']
 **__author__** = 'Andrey Usov <https://github.com/ownport/pydoc2md>'
+**__file__** = './pydoc2md.py'
+**__name__** = 'pydoc2md'
+**__package__** = None
 **__version__** = '0.1'
-**txt2md** = <pydoc2md.TextDoc2Markdown instance>
 
-## VERSION
+## Version
 
 0.1
 
-## AUTHOR
+## Author
 
 Andrey Usov <https://github.com/ownport/pydoc2md>
 
